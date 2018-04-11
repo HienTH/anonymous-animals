@@ -59,9 +59,8 @@ $(document).ready(()=> {
 	/*
 	Khi client leave trang hoac F5
 	*/
-	$(window).bind('beforeunload'), function () {
-		/* body... */
+	$(window).bind('beforeunload', function () {
 		socket.emit('animal-uncheck', inputCheckedId);
-	}
+	});
 
 });
